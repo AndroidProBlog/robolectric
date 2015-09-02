@@ -1,5 +1,6 @@
 package br.com.androidpro.robolectric;
 
+import android.app.Activity;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -7,7 +8,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends Activity {
 
     int numberOfClicks = 0;
 
@@ -22,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 numberOfClicks++;
-                button.setText("Clicked " + numberOfClicks + " times!");
+                button.setText("Clicado " + numberOfClicks + " vezes!");
             }
         });
     }
